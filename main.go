@@ -12,5 +12,11 @@ func main() {
 
     r.StaticFile("/", "./views/index.html")
 
+    r.NoRoute(func(c *gin.Context) {
+        c.JSON(404, gin.H{
+            "message": "Rota não encontrada",
+        })
+    })
+
     r.Run(":9000")
 }
