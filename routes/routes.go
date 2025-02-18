@@ -8,7 +8,7 @@ import (
 // ConfigurarPDFRoutes configura as rotas relacionadas ao PDF.
 func ConfigurarPDFRoutes(router *gin.Engine) {
     pdf := router.Group("/pdf")
-    {
-        pdf.POST("/readpdf", controllers.ReadPDF)
+    {   
+        pdf.POST("/askquestion", controllers.AskQuestion)
     }
 }
